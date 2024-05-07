@@ -14,11 +14,11 @@ public class UsersModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-    @Column(nullable = false, unique = true, length = 35)
+    @Column(nullable = false, length = 35)
     private String name;
     @Column(nullable = false, unique = true, length = 50)
     private String email;
-    @Column(nullable = false, unique = true, length = 20)
+    @Column(nullable = false, unique = false, length = 20)
     private String password;
 
     public UUID getId() {
