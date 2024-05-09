@@ -59,4 +59,21 @@ public class UsersController {
         usersService.delete(usersModelOptional.get());
         return ResponseEntity.status(HttpStatus.OK).body(usersModelOptional.get());
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<Object> updateUser(@PathVariable(value = "id") UUID id, @RequestBody UsersModel user) {
+        Optional<UsersModel> usersModelOptional = usersService.findById(id);
+
+        if(!usersModelOptional.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        }
+
+        UsersModel existingUser = usersModelOptional.get();
+        existingUser.setName(user.getName());
+        existingUser.setEmail(user.getEmail());
+
+        UsersModel updatedUser = usersService.updateUser(existingUser);
+
+        return ResponseEntity.status(HttpStatus.OK).body(updatedUser);
+    }
+
 }

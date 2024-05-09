@@ -41,4 +41,8 @@ public class UsersService {
     public void delete(UsersModel usersModel) {
         usersRepository.delete(usersModel);
     }
+
+    public UsersModel updateUser(UsersModel existingUser) {
+        return usersRepository.save(existingUser);
+    }
 }
