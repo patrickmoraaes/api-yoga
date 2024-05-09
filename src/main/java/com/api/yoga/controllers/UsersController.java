@@ -25,7 +25,7 @@ public class UsersController {
         this.usersService = usersService;
     }
 
-    @PostMapping
+    @PostMapping //adiciona usuario
     public ResponseEntity<Object> createUser(@RequestBody UsersModel user) {
         if(usersService.existsByEmail(userModel.getEmail())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Email is already in use!");
@@ -35,22 +35,28 @@ public class UsersController {
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping //busca todos os usuarios
     public ResponseEntity<List<UsersModel>> getAllUsers(){
         return ResponseEntity.status(HttpStatus.OK).body(usersService.findAll());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}")//busca usuario pelo ID
     public ResponseEntity<Object> getOneUser(@PathVariable(value = "id") UUID id){
         Optional<UsersModel> usersModelOptional = usersService.findById(id);
 
-        if(!usersModelOptional.isPresent()){
-
+        if(!usersModelOptional.isPresent()){ //verifica o ID se existe
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
-
         }
-
         return ResponseEntity.status(HttpStatus.OK).body(usersModelOptional.get());
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> deleteUser(@PathVariable(value = "id") UUID id){
+        Optional<UsersModel> usersModelOptional = usersService.findById(id);
+        if(!usersModelOptional.isPresent()){ //verifica o ID se existe
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        }
+        usersService.delete(usersModelOptional.get());
+        return ResponseEntity.status(HttpStatus.OK).body(usersModelOptional.get());
+    }
 }
