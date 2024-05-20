@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  #logo {
+    max-width: 150px;
+  }
+  
+  .intro {
+    text-align: center;
+    padding: 1em;
+  }
+  
+  .intro-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .intro-text {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  h1 {
+    color: #4CAF50;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  #namaste-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  #namaste-button:hover {
+    background-color: #45a049;
+  }
+  
+  .plans {
+    text-align: center;
+    padding: 1em;
+  }
+  
+  .plan-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  
+  .plan-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex: 1 1 calc(50% - 1em);
+    max-width: calc(95% - 1em);
+  }
+  
+  .plan-button img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #start-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 2em;
+  }
+  
+  #start-button:hover {
+    background-color: #45a049;
+  }
+  
+  @media (min-width: 768px) {
+    .plan-button {
+      flex: 1 1 calc(25% - 1em);
+      max-width: calc(25% - 1em);
+    }
+  }

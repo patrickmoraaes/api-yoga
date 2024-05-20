@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plano Leve - Meu Yoga App</title>
+  <link rel="stylesheet" href="./planoleve.css">
+</head>
+<body>
+  <header>
+    <img src="./imagens/logo.png" alt="Meu Yoga App" id="logo">
+  </header>
+  <main>
+    <section class="pose-container">
+      <img src="" alt="Yoga Pose" id="pose-image">
+      <h2 id="pose-name">Nome da Pose</h2>
+      <div class="controls">
+        <button id="prev-button">Voltar</button>
+        <button id="play-button">Play</button>
+        <button id="next-button">Próximo</button>
+      </div>
+      <div class="timer">
+        <div class="timer-circle">
+          <span id="timer-count">30</span>
+        </div>
+        <div class="timer-text">00:30</div>
+        <div class="pose-counter">
+          <span id="pose-index">1</span> / <span id="total-poses">12</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./planonormal.js"></script>
+</body>
+</html>
