@@ -45,4 +45,8 @@ public class UsersService {
     public UsersModel updateUser(UsersModel existingUser) {
         return usersRepository.save(existingUser);
     }
+
+    public Optional<UsersModel> findByEmail(String email) {
+        return usersRepository.findByEmail(email);
+    }
 }

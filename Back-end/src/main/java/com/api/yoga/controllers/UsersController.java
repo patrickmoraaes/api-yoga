@@ -14,7 +14,7 @@ import java.util.UUID;
 
 @RestController
 @CrossOrigin(origins= "*", maxAge = 3600)
-@RequestMapping("/Cadastro-user")
+@RequestMapping("/users")
 public class UsersController {
 
     UsersModel userModel = new UsersModel();
@@ -25,7 +25,23 @@ public class UsersController {
         this.usersService = usersService;
     }
 
-    @PostMapping //adiciona usuario
+
+    @PostMapping("/login")
+    public ResponseEntity<Object> loginUser(@RequestBody UsersModel user) {
+        Optional<UsersModel> usersModelOptional = usersService.findByEmail(user.getEmail());
+
+        if (usersModelOptional.isPresent()) {
+            UsersModel existingUser = usersModelOptional.get();
+            if (existingUser.getPassword().equals(user.getPassword())) { // Comparação de senha simples
+                return ResponseEntity.status(HttpStatus.OK).body("Login bem-sucedido");
+            }
+        }
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Email ou senha incorretos");
+    }
+
+
+    @PostMapping("/create")//adiciona usuario
     public ResponseEntity<Object> createUser(@RequestBody UsersModel user) {
         if(usersService.existsByEmail(userModel.getEmail())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Email is already in use!");
