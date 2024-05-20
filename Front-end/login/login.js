@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 // Login bem-sucedido
                 alert('Login bem-sucedido!');
+                window.location.href = '../yoga1.html';
             } else {
                 // Falha no login
                 const data = await response.json();

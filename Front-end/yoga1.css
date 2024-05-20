@@ -103,4 +103,8 @@ body {
       flex: 1 1 calc(25% - 1em);
       max-width: calc(25% - 1em);
     }
+
+    .intro-image{
+      width: 30%;
+    }
   }
