@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+.forgot-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.forgot-password{
+    text-decoration: none;
+    color: #a7a7a7;
+}
+
+
+button {
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00cc66;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00b359;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;;
+    margin-top: 40px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.footer a {
+    color: #00cc66;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+        box-shadow: 0 1px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+  
+
+    form {
+      padding: 30px;
+    }
+}

@@ -43,7 +43,7 @@ public class UsersController {
 
     @PostMapping("/create")//adiciona usuario
     public ResponseEntity<Object> createUser(@RequestBody UsersModel user) {
-        if(usersService.existsByEmail(userModel.getEmail())){
+        if(usersService.existsByEmail(user.getEmail())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Email is already in use!");
         }
 

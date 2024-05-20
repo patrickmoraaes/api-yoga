@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Yoga App - Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/77e34b6d57.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button">&larr;</button>
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Meu Yoga Logo">
+                <h1>Meu Yoga</h1>
+                <p>App</p>
+            </div>
+        </header>
+        <main>
+            <h2>Olá! Registre-se para começar. Namastê!</h2>
+            <form id="cadastroForm" method="post">
+                <input type="text" id="name" placeholder="Nome" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <input type="password" id="confirmPassword" placeholder="Confirme senha" required>
+                <button type="submit" class="register-button">Registre-se</button>
+            </form> <p>Ou Login com</p>
+            <div class="social-login">
+               
+                <div class="social-buttons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-apple"></i>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Não tem conta? <a href="#">Registre-se aqui!</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
