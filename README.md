@@ -98,7 +98,7 @@ Node.js foi utilizado na API das posições de yoga. Esta API fornece informaç�
 ## Contribuidores
 
 - Isabella de Melo Moreira (github.com/isamoreira)
-- Ivan Marcio da Silva Lima (https://github.com/ivanmslima)
+- Ivan Marcio da Silva Lima (github.com/ivanmslima)
 - Nome do Aluno 3
 - Nome do Aluno 4
 
