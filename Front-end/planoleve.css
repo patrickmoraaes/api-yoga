@@ -82,4 +82,9 @@ body {
     background-color: #45a049;
   }
   
+  header {
+    position: relative;
+    padding: 10px;
+  }
   
+ 

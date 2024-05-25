@@ -15,12 +15,14 @@
         </div>
         <form id="loginForm" action="#" method="POST">
             <input type="email" name="email" placeholder="Seu e-mail" required>
-                <input type="password" name="senha" placeholder="Sua senha" required>
+            <input type="password" name="senha" placeholder="Sua senha" required>
             <div class="forgot-container">
-            <a href="#" class="forgot-password">Esqueceu a senha?</a>
-        </div>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            </div>
             <button type="submit">Login</button>
         </form>
+        <div id="error-message" style="color: red; display: none;"></div>
+        <div id="loading" style="display: none;">Carregando...</div>
         <div class="social-login">
             <p>Ou Login com</p>
             <div class="social-icons">
