@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Erro:', error);
             errorMessageDiv.textContent = 'Erro ao tentar fazer login. Verifique o email ou senha';
-            errorMessageDiv.style.display = 'block';
+            errorMessageDiv.style.display = 'block' ;
         }
     });
 });
